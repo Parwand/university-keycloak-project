@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Student</title>
+</head>
+<body>
+<h1>Manage Student</h1>
+Welcome <span th:text="${#authentication.getPrincipal().getUsername()}">Username</span>, here you can manage student
+</body>
+</html>
