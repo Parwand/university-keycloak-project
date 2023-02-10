@@ -32,8 +32,8 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
                 .requestMatchers("/student")
-                // .hasAnyRole("USER", "ROLE_user", "user")
-                .hasAnyAuthority("SCOPE_profile")
+                .hasAnyRole("USER", "ROLE_user", "user")
+                //.hasAnyAuthority("SCOPE_profile")
                 .requestMatchers("/manage-student")
                 .hasAnyAuthority("SCOPE_profile")
                 .anyRequest()
