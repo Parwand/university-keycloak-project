@@ -47,7 +47,7 @@ public class SecurityConfig {
         http.authorizeHttpRequests()
                 .requestMatchers("/student")
                 .hasAnyRole("user", "professor")
-                .requestMatchers("/manage-student")
+                .requestMatchers("/manage-students")
                 .hasAnyRole("professor")
                 .anyRequest()
                 .permitAll();

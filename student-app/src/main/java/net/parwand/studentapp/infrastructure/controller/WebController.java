@@ -37,10 +37,10 @@ public class WebController {
         return "new student";
     }
 
-    @GetMapping("/manage-student")
+    @GetMapping("/manage-students")
     // @PreAuthorize("hasAuthority('PROFESSOR')")
     public String manageStudents() {
-        return "manage-student";
+        return "manage-students";
     }
 
 
