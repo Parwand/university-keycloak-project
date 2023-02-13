@@ -45,6 +45,7 @@ public class SecurityConfig {
                 .anyRequest()
                 .permitAll();
         http.oauth2Login()
+                .defaultSuccessUrl("/home")
                 .and()
                 .logout()// .addLogoutHandler(keycloakLogoutHandler)
                 .logoutSuccessUrl("/login");
