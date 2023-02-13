@@ -6,10 +6,10 @@
 </head>
 <body>
 <h1>Home Page</h1>
-<h2>Welcome <span th:text="${#authentication.getPrincipal().getUsername()}">Username</span></h2>
+<h2>Welcome <span th:text="${#authentication.getPrincipal()}">Username</span></h2>
 
 <div>
-    <a href="/professor/logout">Logout</a>
+    <a href="/logout">Logout</a>
 </div>
 </body>
 </html>
