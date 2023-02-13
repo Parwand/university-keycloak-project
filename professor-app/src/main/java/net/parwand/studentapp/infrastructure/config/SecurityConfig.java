@@ -50,6 +50,7 @@ public class SecurityConfig {
                 .logout()// .addLogoutHandler(keycloakLogoutHandler)
                 .logoutSuccessUrl("/login");
         http.csrf().disable().cors().disable();
+        http.exceptionHandling().accessDeniedPage("/access-denied");
         http.oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt);
         return http.build();
     }
