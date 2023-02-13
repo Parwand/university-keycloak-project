@@ -15,7 +15,11 @@ public class WebController {
     }
 
     @GetMapping("/home")
-    @PreAuthorize("hasAuthority('PROFESSOR')")
+    public String homePage() {
+        return "home";
+    }
+
+    @GetMapping("/")
     public String index() {
         return "home";
     }
